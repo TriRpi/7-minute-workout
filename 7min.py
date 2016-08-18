@@ -9,9 +9,9 @@ os.system('clear')
 print("welcome to the 7 minute work-out")
 
 # list with all exercizes to perform
-exercizes = ["jumping jacks", "Wall sit", "Push-up", "Abdominal crunch", "Step-up onto chair", "squat", "triceps dip on chair", "Plank", "High knees running in place", "Lunge", "Push-up and rotation", "Side Plank"]
+exercises = ["jumping jacks", "Wall sit", "Push-up", "Abdominal crunch", "Step-up onto chair", "squat", "triceps dip on chair", "Plank", "High knees running in place", "Lunge", "Push-up and rotation", "Side Plank"]
 
-exercize_duration = 1 # time of exercize
+exercise_duration = 1 # time of exercize
 rest_duration = 1     # time of rest
 
 print("press enter to continue")
@@ -20,20 +20,20 @@ print("press enter to continue")
 input()
 
 # for every exercize do
-for workout in range(len(exercizes)):
+for workout in range(len(exercises)):
    
-   print(exercizes[workout])
+   print(exercises[workout])
 
 # if it isn't last workout
-   if not (workout == (len(exercizes) - 1)):
-       nextup = exercizes[workout + 1]
+   if not (workout == (len(exercises) - 1)):
+       nextup = exercises[workout + 1]
        print("next up: " + nextup)
 
-       sleep(exercize_duration)
+       sleep(exercise_duration)
 
        print("rest")
        sleep(rest_duration)
    else:
-       sleep(exercize_duration)
+       sleep(exercise_duration)
 
 print("well done, you burned 100000000 calories")
