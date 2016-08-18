@@ -20,12 +20,12 @@ input("press enter to continue")
 # for every exercize do
 for workout in exercises:
    
-   print(exercises[workout])
+   print(workout)
 
 # if it isn't last workout
-   if not (workout == (len(exercises) - 1)):
-       nextup = exercises[workout + 1]
-       print("next up: " + nextup)
+   if not (workout == exercises[-1]):
+       nextup = exercises.index(workout) + 1
+       print("next up: " + exercises[nextup])
 
        sleep(exercise_duration)
 
