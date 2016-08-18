@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import os 
-import time
+import os
+from time import sleep
 
 # clear screen
 os.system('clear')
@@ -25,13 +25,15 @@ for workout in range(len(exercizes)):
    print(exercizes[workout])
 
 # if it isn't last workout
-   if not (workout == len(exercizes)):
+   if not (workout == (len(exercizes) - 1)):
        nextup = exercizes[workout + 1]
        print("next up: " + nextup)
 
-   time.sleep(exercize_duration)
+       sleep(exercize_duration)
 
-   print("rest")
-   time.sleep(rest_duration)
+       print("rest")
+       sleep(rest_duration)
+   else:
+       sleep(exercize_duration)
 
 print("well done, you burned 100000000 calories")
