@@ -4,7 +4,7 @@ import os
 from time import sleep
 
 # clear screen
-os.system('clear')
+os.system('cls' if os.name == 'nt' else 'clear')
 
 print("welcome to the 7 minute work-out")
 
@@ -14,13 +14,11 @@ exercises = ["jumping jacks", "Wall sit", "Push-up", "Abdominal crunch", "Step-u
 exercise_duration = 1 # time of exercize
 rest_duration = 1     # time of rest
 
-print("press enter to continue")
-
 # when enter gets pressed, program will continue
-input()
+input("press enter to continue")
 
 # for every exercize do
-for workout in range(len(exercises)):
+for workout in exercises:
    
    print(exercises[workout])
 
